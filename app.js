@@ -24,6 +24,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+/*accesos a los rest apis*/
+//routeApiRest=require('./routes/RestPrueba')(app);
+
+require('./routes/RestPrueba')(app);
+//app.use();
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
